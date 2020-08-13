@@ -10,67 +10,7 @@ html {
   /* to deal easily with rems == 10px */ }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
   box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  /* this has to do with some shacking after the
-                                    animation finishes (it makes some kind of shacking for
-                                    the parent element), 
-                                    this property will stop it*/
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 700;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    /* this is the moveInLeft keyframe */
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    /* some other animation properties */
-    /*
-    animation-delay: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    */ }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 1.75rem;
-    animation-name: moveInRight;
-    /* this is the moveInRight keyframe */
-    animation-duration: 1s;
-    animation-timing-function: ease-out; }
 
 @keyframes moveInLeft {
   /* when the animation starts */
@@ -105,6 +45,48 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* this has to do with some shacking after the
+                                      animation finishes (it makes some kind of shacking for
+                                      the parent element), 
+                                      this property will stop it*/
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    /* this is the moveInLeft keyframe */
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* some other animation properties */
+    /*
+      animation-delay: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.75rem;
+    animation-name: moveInRight;
+    /* this is the moveInRight keyframe */
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -155,5 +137,25 @@ body {
   animation-delay: 0.75s;
   animation-fill-mode: backwards;
   /* this is to make the botton 
-                                      disappear (default state) before 
-                                      the animation starts */ }
+                                        disappear (default state) before 
+                                        the animation starts */ }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
